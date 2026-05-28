@@ -27,16 +27,18 @@ jobs:
 
       - name: Decode Keystore
         run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/photosync.keystore
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > mobile/android/app/photosync.keystore
+        working-directory: .
 
       - name: Create key.properties
         run: |
-          cat > android/key.properties << EOF
+          cat > mobile/android/key.properties << EOF
           storePassword=${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword=${{ secrets.KEY_PASSWORD }}
           keyAlias=${{ secrets.KEY_ALIAS }}
           storeFile=photosync.keystore
           EOF
+        working-directory: .
 
       - name: Install dependencies
         run: flutter pub get
