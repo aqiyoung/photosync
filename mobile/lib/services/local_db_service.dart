@@ -80,7 +80,7 @@ class LocalDbService {
 
   Future<void> updateSyncStatus(String id, String status, {int? serverId}) async {
     final db = await database;
-    final values = {'sync_status': status};
+    final values = <String, Object?>{'sync_status': status};
     if (serverId != null) values['server_id'] = serverId;
     if (status == 'synced') values['synced_at'] = DateTime.now().toIso8601String();
     await db.update('photos', values, where: 'id = ?', whereArgs: [id]);
