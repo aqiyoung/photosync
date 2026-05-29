@@ -50,7 +50,7 @@ class _PhotoSyncAppState extends State<PhotoSyncApp> {
     }
 
     return MaterialApp(
-      title: 'PhotoSync',
+      title: '智能相册',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       home: _authService.isLoggedIn

@@ -89,7 +89,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
             ),
             const SizedBox(width: 10),
             const Text(
-              'PhotoSync',
+              '智能相册',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

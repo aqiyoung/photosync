@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
 
     <application
-        android:label="PhotoSync"
+        android:label="智能相册"
         android:name="${applicationName}"
         android:icon="@drawable/ic_launcher"
         android:usesCleartextTraffic="true">
