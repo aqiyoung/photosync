@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'config/theme.dart';
 import 'services/auth_service.dart';
 import 'services/local_db_service.dart';
 import 'services/photo_service.dart';
@@ -38,17 +39,20 @@ class _PhotoSyncAppState extends State<PhotoSyncApp> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return const MaterialApp(
-        home: Scaffold(body: Center(child: CircularProgressIndicator())),
+      return MaterialApp(
+        theme: AppTheme.lightTheme,
+        home: const Scaffold(
+          body: Center(
+            child: CircularProgressIndicator(),
+          ),
+        ),
       );
     }
 
     return MaterialApp(
       title: 'PhotoSync',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
       home: _authService.isLoggedIn
           ? GalleryScreen(dbService: _dbService, syncService: _syncService)
           : LoginScreen(

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Cloud base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,62 C30,52 38,44 48,44 C50,38 56,34 62,34 C70,34 76,40 76,48 C82,48 88,54 88,62 C88,70 82,76 74,76 L36,76 C30,76 26,72 26,66 C26,64 28,62 30,62 Z"/>
+    <!-- Arrow up -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,70 L54,50 M46,58 L54,50 L62,58"/>
+    <path
+        android:strokeColor="#2196F3"
+        android:strokeWidth="3"
+        android:pathData="M54,70 L54,50"/>
+    <path
+        android:strokeColor="#2196F3"
+        android:strokeWidth="3"
+        android:pathData="M46,58 L54,50 L62,58"/>
+    <!-- Photo frame -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M44,56 L44,68 L64,68 L64,56 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,58 L46,66 L62,66 L62,58 Z"/>
+    <!-- Sun in photo -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M50,61 A2,2 0 1,1 50.01,61"/>
+    <!-- Mountain in photo -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M46,66 L52,60 L56,64 L60,58 L62,66 Z"/>
+</vector>

@@ -1,0 +1,17 @@
+[Unit]
+Description=PhotoSync API Server
+After=network.target
+
+[Service]
+Type=simple
+User=liyang
+WorkingDirectory=/vol1/1000/dev-projects/photosync/server
+Environment=PORT=18080
+Environment=TLS_CERT=/usr/trim/var/trim_connect/ssls/photo.threel.site/1780009226/fullchain.crt
+Environment=TLS_KEY=/usr/trim/var/trim_connect/ssls/photo.threel.site/1780009226/photo.threel.site.key
+ExecStart=/vol1/1000/dev-projects/photosync/server/photosync-server
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
